@@ -144,6 +144,8 @@ int f2fs_check_zones(int j)
 		blkz = (struct blk_zone *)(rep + 1);
 		for (i = 0; i < rep->nr_zones && sector < total_sectors; i++) {
 
+			if(i<8) dev->nr_rnd_zones++;
+			
 			if (blk_zone_cond(blkz) == BLK_ZONE_COND_READONLY ||
 			    blk_zone_cond(blkz) == BLK_ZONE_COND_OFFLINE)
 				last_is_conv = 0;
