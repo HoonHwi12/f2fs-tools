@@ -27,6 +27,8 @@
 
 #include <f2fs_fs.h>
 
+#include <sys/sysmacros.h>
+
 #ifndef WITH_ANDROID
 /* SCSI command for standard inquiry*/
 #define MODELINQUIRY	0x12,0x00,0x00,0x00,0x4A,0x00
